@@ -58,6 +58,10 @@ public final class TypeFactory {
         this(Lists.<Class<? extends Annotation>>newArrayList(), new DefaultVariableNameFunction());
     }
 
+    public TypeFactory(List<Class<? extends Annotation>> entityAnnotations) {
+        this(entityAnnotations, new DefaultVariableNameFunction());
+    }
+
     public TypeFactory(List<Class<? extends Annotation>> entityAnnotations, Function<EntityType, String> variableNameFunction) {
         this.entityAnnotations = entityAnnotations;
         this.variableNameFunction = variableNameFunction;
