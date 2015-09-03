@@ -64,7 +64,7 @@ public class EntityType extends TypeAdapter implements Comparable<EntityType> {
      * @param type the type to be used
      */
     public EntityType(Type type) {
-        this(type, new LinkedHashSet<Supertype>(), new DefaultVariableNameFunction());
+        this(type, new LinkedHashSet<Supertype>(), DefaultVariableNameFunction.INSTANCE);
     }
 
     /**
@@ -84,7 +84,7 @@ public class EntityType extends TypeAdapter implements Comparable<EntityType> {
      * @param superTypes the super types to be used
      */
     public EntityType(Type type, Set<Supertype> superTypes) {
-        this(type, superTypes, new DefaultVariableNameFunction());
+        this(type, superTypes, DefaultVariableNameFunction.INSTANCE);
     }
 
     /**

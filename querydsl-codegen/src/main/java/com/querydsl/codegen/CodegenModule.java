@@ -68,7 +68,7 @@ public class CodegenModule  extends AbstractModule {
         bind(PACKAGE_SUFFIX, "");
         bind(KEYWORDS, Collections.<String>emptySet());
         bind(IMPORTS, Collections.<String>emptySet());
-        bind(VARIABLE_NAME_FUNCTION_CLASS, new DefaultVariableNameFunction());
+        bind(VARIABLE_NAME_FUNCTION_CLASS, DefaultVariableNameFunction.INSTANCE);
     }
 
 }

@@ -67,7 +67,7 @@ public abstract class AbstractDomainExporter {
 
     @SuppressWarnings("unchecked")
     protected final TypeFactory typeFactory = new TypeFactory(Arrays.asList(Entity.class,
-            javax.persistence.MappedSuperclass.class, Embeddable.class), new DefaultVariableNameFunction());
+            javax.persistence.MappedSuperclass.class, Embeddable.class));
 
     private final QueryTypeFactory queryTypeFactory;
 

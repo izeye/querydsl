@@ -221,10 +221,10 @@ public class DefaultConfiguration implements Configuration {
             } catch (RuntimeException e) {
                 throw e;
             } catch (Exception e) {
-               variableNameFunction = new DefaultVariableNameFunction();
+               variableNameFunction = DefaultVariableNameFunction.INSTANCE;
             }
         } else {
-            variableNameFunction = new DefaultVariableNameFunction();
+            variableNameFunction = DefaultVariableNameFunction.INSTANCE;
         }
         module.bind(CodegenModule.VARIABLE_NAME_FUNCTION_CLASS, variableNameFunction);
 
